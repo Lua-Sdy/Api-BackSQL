@@ -1,11 +1,13 @@
 const express = require('express');
 const cors = require('cors');
+const app = express();
+app.use(cors());
+const cors = require('cors');
 const dotenv = require('dotenv');
 const db = require('./db'); // Importa a conexão com o banco de dados
 
 dotenv.config();
 
-const app = express();
 const port = process.env.PORT || 3005;
 
 app.use(cors());
